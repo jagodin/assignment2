@@ -234,7 +234,7 @@ for i=1:nx
 end
 
 % Conductivity Plot
-figure(3)
+figure(4)
 rectangle('Position',top_box)
 rectangle('Position',bottom_box)
 surface(sigma)
@@ -312,7 +312,7 @@ for i=1:nx
     end
 end
 
-figure(4)
+figure(5)
 surf(sMap3)
 title('Voltages Across Surface')
 xlabel('X');
@@ -321,19 +321,19 @@ ylabel('Y');
 % Electric Field
 [Ex, Ey] = gradient(sMap3);
 
-figure(5)
+figure(6)
 surface(Ex)
 title('X-Component of Electric Field')
 xlabel('X');
 ylabel('Y');
 
-figure(6)
+figure(7)
 surface(Ey)
 title('Y-Component of Electric Field')
 xlabel('X');
 ylabel('Y');
 
-figure(7)
+figure(8)
 quiver(Ex,Ey)
 title('Electric Field')
 xlabel('X');
@@ -343,7 +343,7 @@ ylabel('Y');
 Jx = Ex.*sigma;
 Jy = Ey.*sigma;
 
-figure(8)
+figure(9)
 quiver(Jx,Jy)
 title('Current Density')
 xlabel('X');
@@ -366,7 +366,7 @@ current = sMap3./R;
 C0 = sum(current(1,:));
 C1 = sum(current(L,:));
 C = (C0 + C1)/2;
-figure(9)
+figure(10)
 mesh(current);
 xlabel('X');
 ylabel('Y');
@@ -469,7 +469,7 @@ for i=1:nx
 end
 
 current = sMap4./R;
-figure(10)
+figure(11)
 mesh(current);
 xlabel('X');
 ylabel('Y');
@@ -572,7 +572,7 @@ for i=1:nx
 end
 
 current = sMap5./R;
-figure(11)
+figure(12)
 mesh(current);
 xlabel('X');
 ylabel('Y');
@@ -684,7 +684,7 @@ for i=1:nx
 end
 
 current = sMap5./R;
-figure(12)
+figure(13)
 mesh(current);
 xlabel('X');
 ylabel('Y');
@@ -782,7 +782,7 @@ for i=1:nx
 end
 
 current = sMap5./R;
-figure(13)
+figure(14)
 mesh(current);
 xlabel('X');
 ylabel('Y');
@@ -880,7 +880,7 @@ for i=1:nx
 end
 
 current = sMap5./R;
-figure(14)
+figure(15)
 mesh(current);
 xlabel('X');
 ylabel('Y');
